@@ -1,8 +1,15 @@
 import sys  # Imports the sys module to use for system-specific parameters and functions
 import time  # Imports the time module to handle timing events like delays
 
-# Prints the welcome message when the program starts
-print("\nWelcome To InfoTechCenter V1.0\n")
+# ANSI escape sequences for colors
+RESET = "\033[0m"  # Resets color to default
+GREEN = "\033[92m"  # Bright green
+RED = "\033[91m"  # Red
+YELLOW = "\033[93m"  # Yellow
+CYAN = "\033[96m"  # Bright cyan
+
+# Prints the welcome message when the program starts with green color
+print(f"{GREEN}\nWelcome To InfoTechCenter V1.0\n{RESET}")
 
 x = 0  # Initialize counter variable to control the while loop
 ellipsis = 0  # Initialize ellipsis counter for the dots displayed in the booting message
@@ -11,7 +18,7 @@ ellipsis = 0  # Initialize ellipsis counter for the dots displayed in the bootin
 while x != 20:
     x += 1  # Increment the loop counter
     # Create the booting message with increasing number of dots (ellipsis)
-    message = ("InfoTech Center System Booting" + "." * ellipsis)
+    message = (f"{YELLOW}InfoTech Center System Booting" + "." * ellipsis + RESET)
     ellipsis += 1  # Increment the ellipsis counter to add more dots in each iteration
     # Overwrite the same line with updated message (using \r to return to the beginning of the line)
     sys.stdout.write("\r" + message)
@@ -21,5 +28,5 @@ while x != 20:
         ellipsis = 0
     # Check if the loop has run 20 times
     if x == 20:
-        # Print final message indicating system boot is complete
-        print("\n\nOperating System Booted Up - Retina Scanned - Access Granted")
+        # Print final message indicating system boot is complete with red color
+        print(f"\n\n{RED}Operating System Booted Up - Retina Scanned - Access Granted{RESET}")
