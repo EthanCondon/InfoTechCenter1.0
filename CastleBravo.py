@@ -11,6 +11,9 @@ CYAN = "\033[96m"  # Bright cyan
 # Prints the welcome message when the program starts with green color
 print(f"{GREEN}\nWelcome To InfoTechCenter V1.0\n{RESET}")
 
+TimeToSleep = 1.5 # Variable to se the time library to 1.5 seconds when called
+time.sleep(TimeToSleep) # Calling the sleep library with the variable TimeToSleep's value
+
 x = 0  # Initialize counter variable to control the while loop
 ellipsis = 0  # Initialize ellipsis counter for the dots displayed in the booting message
 
