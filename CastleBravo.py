@@ -1,5 +1,7 @@
 import sys  # Imports the sys module to use for system-specific parameters and functions
 import time  # Imports the time module to handle timing events like delays
+import random
+from time import sleep
 
 # ANSI escape sequences for colors
 RESET = "\033[0m"  # Resets color to default
@@ -39,8 +41,7 @@ print("\n***********************************************************************
 print("Weather Branch\n")
 
 # Import necessary libraries: random for selecting a random weather condition, and sleep for adding delays
-import random
-from time import sleep
+
 
 # Function to randomly choose a weather condition from a predefined list
 def weather():
@@ -74,8 +75,7 @@ def vehicleResponseSystem():
 
 # Call the vehicle response system function to provide feedback based on the weather
 vehicleResponseSystem()
-import random
-from time import sleep
+
 
 # Simulate gas level gauge by randomly choosing a gas level from the list
 def gasLevelGauge():
